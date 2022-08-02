@@ -27,6 +27,11 @@
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
+    <repository>
+        <id>central</id>
+        <name>a0rpfcy41g1qy-artifactory-primary-0-releases</name>
+        <url>https://artifactmanager.jfrog.io/artifactory/mvn-libs-release-local</url>
+    </repository>
   </distributionManagement>
 
   <build>
@@ -216,11 +221,4 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
-<distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>a0rpfcy41g1qy-artifactory-primary-0-releases</name>
-        <url>https://artifactmanager.jfrog.io/artifactory/mvn-libs-release</url>
-    </repository>
-</distributionManagement>
 </project>
