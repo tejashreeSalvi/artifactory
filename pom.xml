@@ -30,13 +30,8 @@
     <repository>
         <id>central</id>
         <name>a0rpfcy41g1qy-artifactory-primary-0-releases</name>
-        <url>https://artifactmanager.jfrog.io/artifactory/mvn-libs-release</url>
+        <url>https://artifactmanager.jfrog.io/artifactory/testplugin</url>
     </repository>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>a0rpfcy41g1qy-artifactory-primary-0-snapshots</name>
-        <url>https://artifactmanager.jfrog.io/artifactory/test-libs-snapshot-local</url>
-    </snapshotRepository>
   </distributionManagement>
 
   <build>
@@ -191,6 +186,12 @@
         <artifactId>junit-dep</artifactId>
         <version>4.10</version>
         <scope>test</scope>
+      </dependency>
+      <dependency>
+	<groupId>org.testng</groupId>
+	<artifactId>testng</artifactId>
+	<version>6.8</version>
+	<scope>compile</scope>
       </dependency>
 
       <dependency>
