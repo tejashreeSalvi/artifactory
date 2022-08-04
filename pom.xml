@@ -27,6 +27,16 @@
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
+    <repository>
+        <id>central</id>
+        <name>a0rpfcy41g1qy-artifactory-primary-0-releases</name>
+        <url>https://artifactmanager.jfrog.io/artifactory/mvn-libs-release</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0rpfcy41g1qy-artifactory-primary-0-snapshots</name>
+        <url>https://artifactmanager.jfrog.io/artifactory/test-libs-snapshot-local</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <build>
