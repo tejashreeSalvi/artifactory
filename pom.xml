@@ -21,18 +21,13 @@
     <module>webapp</module>
   </modules>
 
-  <distributionManagement>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
-    <repository>
-        <id>central</id>
-        <name>a0rpfcy41g1qy-artifactory-primary-0-releases</name>
-        <url>https://artifactmanager.jfrog.io/artifactory/testplugin-virtual</url>
-    </repository>
-  </distributionManagement>
+<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0rpfcy41g1qy-artifactory-primary-0-snapshots</name>
+        <url>https://artifactmanager.jfrog.io/artifactory/default-libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
 
   <build>
     <plugins>
