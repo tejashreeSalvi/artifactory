@@ -9,10 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/sumitchansoriya/artifactory.git'
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                scmVars = checkout scm
                 }
             }
         stage('Build') {
