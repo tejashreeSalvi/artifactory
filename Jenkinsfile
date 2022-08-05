@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                scripts {
+                script {
                         scmVars = checkout scm
                     }
                 }
