@@ -169,22 +169,11 @@
         <artifactId>servlet-api</artifactId>
         <version>2.5</version>
       </dependency>
-      <dependency>
-	<groupId>org.apache.poi</groupId>
-	<artifactId>poi-scratchpad</artifactId>
-	<version>4.1.0</version>
-      </dependency>
 
       <dependency>
         <groupId>javax.servlet.jsp</groupId>
         <artifactId>jsp-api</artifactId>
         <version>2.2</version>
-      </dependency>
-
-      <dependency>
-	<groupId>org.seleniumhq.selenium</groupId>
-	<artifactId>selenium-chrome-driver</artifactId>
-	<version>3.141.59</version>
       </dependency>
 	    
       <dependency>
@@ -192,12 +181,6 @@
         <artifactId>junit-dep</artifactId>
         <version>4.10</version>
         <scope>test</scope>
-      </dependency>
-      <dependency>
-	<groupId>org.testng</groupId>
-	<artifactId>testng</artifactId>
-	<version>6.8</version>
-	<scope>compile</scope>
       </dependency>
 
       <dependency>
