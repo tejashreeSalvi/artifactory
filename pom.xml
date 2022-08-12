@@ -21,14 +21,6 @@
     <module>webapp</module>
   </modules>
 
-<distributionManagement>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>a0rpfcy41g1qy-artifactory-primary-0-snapshots</name>
-        <url>https://artifactmanager.jfrog.io/artifactory/default-libs-snapshot-local</url>
-    </snapshotRepository>
-</distributionManagement>
-
   <build>
     <plugins>
       <plugin>
