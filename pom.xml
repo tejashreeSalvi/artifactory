@@ -10,6 +10,19 @@
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
+	
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0rpfcy41g1qy-artifactory-primary-0-releases</name>
+        <url>https://artifactmanager.jfrog.io/artifactory/team-mvn-release-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0rpfcy41g1qy-artifactory-primary-0-snapshots</name>
+        <url>https://artifactmanager.jfrog.io/artifactory/team-mvn-release-local</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
