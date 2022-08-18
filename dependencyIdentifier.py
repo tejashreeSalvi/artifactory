@@ -19,15 +19,18 @@ pom = xml.parse('pom.xml')
 
 nsmap = {'m': 'http://maven.apache.org/POM/4.0.0'}
 for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
-    name  = mapping.find('m:artifactId', nsmap).text
-    value = mapping.find('m:version', nsmap).text
-    dependency_name=name+"-"+value+".jar"
+    groupId  = mapping.find('m:groupId', nsmap).text
+    artifactId  = mapping.find('m:artifactId', nsmap).text
+    version = mapping.find('m:version', nsmap).text
+    
+    dependency_name=artifactId+"-"+version+".jar"
+    dependency_path=groupId.replace(".","/")+"/"+artifactId+"/"+version+"/"+dependency_name
     # checking condition for string found or not
     if dependency_name in readfile: 
-        print('String', dependency_name, 'Found In File')
+        print(dependency_name, 'Found In File')
     else: 
-        print('String', dependency_name , 'Not Found')
-        file3.write(dependency_name+"\n") 
+        print(dependency_name , 'Not Found')
+        file3.write(dependency_path+"\n") 
   
 # closing a file
 file2.close()
