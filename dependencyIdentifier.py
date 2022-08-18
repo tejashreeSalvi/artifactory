@@ -3,7 +3,7 @@ import glob
 
 path = "../../../.m2/repository"
 
-text_files = glob.glob(path + "/**/*.jar", recursive = True)
+text_files = glob.glob(path + "/**/*.jar")
 file1 = open("m2_dependencies.txt","w")
   
 file1.writelines(text_files)
