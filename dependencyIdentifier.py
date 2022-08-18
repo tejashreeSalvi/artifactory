@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as xml
 import glob
 
-path = ".m2/repository"
+path = "../../../.m2/repository"
 
 text_files = glob.glob(path + "/**/*.jar", recursive = True)
 file1 = open("m2_dependencies.txt","w")
