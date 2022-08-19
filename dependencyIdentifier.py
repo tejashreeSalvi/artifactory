@@ -30,7 +30,7 @@ for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
         print(dependency_name, 'Found In File')
     else: 
         print(dependency_name , 'Not Found')
-        file3.write(dependency_path+";") 
+        file3.write(dependency_path+"\n") 
   
 # closing a file
 file2.close()
