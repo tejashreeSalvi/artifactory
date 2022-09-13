@@ -22,12 +22,9 @@ for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
     dependency_path=groupId.replace(".","/")+"/"+artifactId+"/"+version+"/"+dependency_name
     dependency_compID="gav://"+groupId+":"+artifactId+":"+version
     # checking condition for string found or not
-    if dependency_name in m2_dependencies: 
-        print(dependency_name, 'Found In File')
-    else: 
-        print(dependency_name , 'Not Found')
-        file1.write(dependency_path+";") 
-        file2.write(dependency_compID+"\n") 
+    print(dependency_name , 'Not Found')
+    file1.write(dependency_path+";") 
+    file2.write(dependency_compID+"\n") 
   
 # closing a file
 file1.close()
