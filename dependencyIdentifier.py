@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as xml
 import glob
 import requests
+from requests.auth import HTTPBasicAuth
 
 path = "../../../.m2/repository"
 m2_dependencies = ""
