@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as xml
 import glob
+import request
 
 path = "../../../.m2/repository"
 m2_dependencies = ""
@@ -25,6 +26,13 @@ for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
     print(dependency_name , 'Not Found')
     file1.write(dependency_path+";") 
     file2.write(dependency_compID+"\n") 
+    url = f"https://artifactmanager.jfrog.io/artifactory/thirdparty-mvn-local/{dependency_path}"
+    response = request.get(url=url, headers={"Authorization": "Basic Oportun:Salvi@2502"})
+    if reponse.status_code == 404:
+        file1.write(dependency_path+";") 
+        file2.write(dependency_compID+"\n") 
+                
+
   
 # closing a file
 file1.close()
