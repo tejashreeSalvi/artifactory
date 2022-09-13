@@ -24,12 +24,13 @@ for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
     dependency_compID="gav://"+groupId+":"+artifactId+":"+version
     # checking condition for string found or not
     print(dependency_name , 'Not Found')
-    file1.write(dependency_path+";") 
-    file2.write(dependency_compID+"\n") 
+#     file1.write(dependency_path+";") 
+#     file2.write(dependency_compID+"\n") 
 
     url = f"https://artifactmanager.jfrog.io/artifactory/thirdparty-mvn-local/{dependency_path}"
     response = requests.get(url=url, headers={"Authorization": "Basic Oportun:Salvi@2502"})
-    if reponse.status_code == 404:
+    print("Response:", response)
+    if response.status_code == 404:
         file1.write(dependency_path+";") 
         file2.write(dependency_compID+"\n")
   
