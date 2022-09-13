@@ -28,7 +28,7 @@ for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
 #     file2.write(dependency_compID+"\n") 
 
     url = f"https://artifactmanager.jfrog.io/artifactory/thirdparty-mvn-local/{dependency_path}"
-    response = requests.get(url=url, headers={"Authorization": "Basic Oportun:Salvi@2502"})
+    response = requests.get(url=url, auth=HTTPBasicAuth('Oportun', 'Salvi@2502'), headers={'Content-Type': 'application/json'})
     print("Response:", response)
     if response.status_code == 404:
         file1.write(dependency_path+";") 
