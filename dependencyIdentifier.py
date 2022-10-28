@@ -28,8 +28,8 @@ for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
 #     file1.write(dependency_path+";") 
 #     file2.write(dependency_compID+"\n") 
 
-    url = f"https://artifactmanager.jfrog.io/artifactory/thirdparty-mvn-local/{dependency_path}"
-    response = requests.get(url=url, auth=HTTPBasicAuth('Oportun', 'Salvi@2502'), headers={'Content-Type': 'application/json'})
+    url = f"https://oportun.jfrog.io/artifactory/thirdparty-mvn-local/{dependency_path}"
+    response = requests.get(url=url, auth=HTTPBasicAuth('Oportun', 'Altimetrik@123'), headers={'Content-Type': 'application/json'})
     print("Response:", response)
     if response.status_code == 404:
         file1.write(dependency_path+";") 
