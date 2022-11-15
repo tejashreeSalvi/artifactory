@@ -23,6 +23,7 @@ for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
     dependency_name=artifactId+"-"+version+".jar"
     dependency_path=groupId.replace(".","/")+"/"+artifactId+"/"+version+"/"+dependency_name
     dependency_compID="gav://"+groupId+":"+artifactId+":"+version
+    print("Dependency Path:", dependency_path)
     # checking condition for string found or not
 #     file1.write(dependency_path+";") 
 #     file2.write(dependency_compID+"\n") 
