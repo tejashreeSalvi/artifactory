@@ -24,7 +24,6 @@ for mapping in pom.findall('//m:dependencies/m:dependency', nsmap):
     dependency_path=groupId.replace(".","/")+"/"+artifactId+"/"+version+"/"+dependency_name
     dependency_compID="gav://"+groupId+":"+artifactId+":"+version
     # checking condition for string found or not
-    print(dependency_name , 'Not Found')
 #     file1.write(dependency_path+";") 
 #     file2.write(dependency_compID+"\n") 
 
